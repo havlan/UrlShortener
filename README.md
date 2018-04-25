@@ -4,7 +4,7 @@
 
 
 - desired:
-    - cache most used urls from a cron service in a map
+    - cache most used urls from a cron service in a map to avoid uneccesary reads
     - force https in redirects
     
 - future work:
@@ -13,9 +13,21 @@
     - use https in general (server, db)
 
 ### To run this simple project
-- create a database
+- create a database (WEB_URL.sql)
 - create a config file or use env
-
+- in src dir (with go workspace, go get...)
+- go build .
+- ./binary
+- postman or similar
+    - post "/url" 
+    ```
+    {
+        "url":"www.example.com"
+    }
+    ``` 
+    - localhost:8080/5 (example) provided by the server
+    - user tries to access localhost:8080/5 and should then be redirected to url provided
+- In a real life setting this can be useful, as long as a short domain name is specified.
 
 
 
