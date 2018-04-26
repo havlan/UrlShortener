@@ -1,7 +1,7 @@
 # UrlShortener
 
 ### A simple url shortening server
-
+[![Build Status](https://travis-ci.org/havlan/UrlShortener.svg?branch=master)](https://travis-ci.org/havlan/UrlShortener)
 
 - desired:
     - cache most used urls from a cron service in a map to avoid uneccesary reads
