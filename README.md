@@ -19,7 +19,8 @@
 - go build .
 - ./binary
 - postman or similar
-    - post "/url" 
+    - post "/url"
+    - example post request json format:
     ```
     {
         "url":"www.example.com"
@@ -32,6 +33,7 @@
 
 
 ### To run this in a docker container
+- This docker image is lightweight, this does not include go runtime etc, it simply copies over the binary and runs it.
 - compile
     - CGO_ENABLED=0 GOOS=linux go build -a -tags netgo -ldflags '-w' .
 - build docker image
